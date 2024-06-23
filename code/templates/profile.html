@@ -1,0 +1,29 @@
+<!DOCTYPE html><html><head><title>KLlibrary</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8i1F73TlSL5Uw5+Uq6TZ5n0eD6DA/Dm1E9WOOr25AZtVMFkgjW8UZJ1I9a" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+<div class="position-absolute top-50 start-50 translate-middle">
+<div class="container mt-3">
+      <h1><b>&emsp;{{a}} Profile</b></h1><br>
+      <form  method="POST" action='/Registerform'>
+      <div class="mb-3 mt-3 text-center">
+      <h5><b>Name:</b>&emsp;{{k[0]}}</h5><br>
+      <h5><b>Role:</b>&emsp;{{k[1]}}</h5><br>
+	<h5><b>E-Mail:</b>&emsp;{{k[5]}}</h5><br>
+	<h5><b>Contact Number:</b>&emsp;{{k[4]}}</h5><br>
+      <h5><b>Username:</b>&emsp;{{k[2]}}</h5><br>
+      <h5><b>Password:</b>&emsp;{{k[3]}}</h5><br>
+    </div>
+    <div class="text-center">
+<a href="/Registerform/{{a}}" type="submit" name="form" value="usrform" class="btn btn-success">Edit</a>&emsp;&emsp;
+<a href="/user_dashboard/{{a}}" name="sub" value="j" class="btn btn-primary">Goback</a></div>
+  </form>
+</div>
+</div>
+</body>
+</html>

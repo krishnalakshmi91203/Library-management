@@ -1,0 +1,67 @@
+<!DOCTYPE html><html><head><title>KLlibrary</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8i1F73TlSL5Uw5+Uq6TZ5n0eD6DA/Dm1E9WOOr25AZtVMFkgjW8UZJ1I9a" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<div class="position-absolute top-50 start-50 translate-middle">
+<div class="container mt-3">
+      <h1><b>Create your Profile</b></h1><br>
+{% if aa == 'new' %}
+      <form  method="POST" action='/Registerform/{{aa}}' class="was-validated" >
+      <div class="mb-3 mt-3 text-center">
+      <label><h5>Name:</h5></label>
+      <input type="text" class="form-control"  placeholder="Enter full name" name="name" >
+      <label><h5>Role:</h5></label>
+      <input type="text" class="form-control" name="role" placeholder="Enter the role" >
+      <label><h5>E-Mail:</h5></label>
+      <input type="email" class="form-control" name="email" placeholder="Enter e-mail" required>
+      <label><h5>Contact Number:</h5></label>
+      <input type="tel" class="form-control" name="num" placeholder="Enter contact number" required>
+      <label><h5>Username:</h5></label>
+      <input type="text" class="form-control" name="uname" placeholder="Enter username" required>
+      <label><h5>Password:</h5></label>
+      <input type="text" class="form-control" name="pwd" placeholder="Enter password" required>
+      </div>
+      <div class="text-center">
+      <a href="/userlogin" type="submit" name="form" value="usrform" class="btn btn-danger">Cancel</a>&emsp;&emsp;
+      <button type="submit" name="sub" value="j" class="btn btn-success">Submit</button></div>
+      </form>
+      </div>
+      </div>
+{% else %}
+      <form  method="POST" action='/Registerform/{{aa}}' class="was-validated">
+      <div class="mb-3 mt-3 text-center">
+      <label><h5>Name:</h5></label>
+      <input type="text" class="form-control" value='{{k[0]}}' name="name" required>
+      <label><h5>Role:</h5></label>
+      <input type="text" class="form-control" name="role" value='{{k[1]}}'>
+      <label><h5>E-Mail:</h5></label>
+      <input type="email" class="form-control" name="email" value='{{k[5]}}' required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+      <label><h5>Contact Number:</h5></label>
+      <input type="tel" class="form-control" name="num" value={{k[4]}}>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+      <label><h5>Username:</h5></label>
+      <input type="text" class="form-control" name="uname" value='{{k[2]}}' required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+      <label><h5>Password:</h5></label>
+      <input type="text" class="form-control" name="pwd" value='{{k[3]}}' required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+      </div>
+      <div class="text-center">
+      <a href="/userlogin" type="submit" name="form" value="usrform" class="btn btn-danger">Cancel</a>&emsp;&emsp;
+      <button type="submit" name="sub" value="j" class="btn btn-success">Submit</button></div>
+      </form>
+      </div>
+      </div>
+{% endif %}
+    
+</body>
+</html>
